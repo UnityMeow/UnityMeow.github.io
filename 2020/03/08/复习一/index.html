@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>复习 · C#相关 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="UnityMeow,"> 
+    <meta name="description" content="结构体和类的区别是什么类型、成员声明、变量初始值、构造析构
+
+结构体是值类型，类是引用类型
+结构体成员不可被声明为protected，类成员可以
+结构体变量声明不能指定初始值，类变量声明可以指定初始,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">复习 · C#相关</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">复习 · C#相关</h1>
+        <div class="stuff">
+            <span>三月 08, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h3 id="结构体和类的区别是什么"><a href="#结构体和类的区别是什么" class="headerlink" title="结构体和类的区别是什么"></a>结构体和类的区别是什么</h3><p>类型、成员声明、变量初始值、构造析构</p>
+<ul>
+<li>结构体是值类型，类是引用类型</li>
+<li>结构体成员不可被声明为protected，类成员可以</li>
+<li>结构体变量声明不能指定初始值，类变量声明可以指定初始值</li>
+<li>结构体不能声明析构以及默认的构造函数，类无此限制</li>
+</ul>
+<h3 id="值类型和引用类型的区别是什么"><a href="#值类型和引用类型的区别是什么" class="headerlink" title="值类型和引用类型的区别是什么"></a>值类型和引用类型的区别是什么</h3><p>继承类型、内存分配、存取速度、存储内容、释放机制、默认赋值、赋值内容</p>
+<ul>
+<li>值类型隐式继承自System.ValueType而且不能继承其他任何类型，引用类型继承自System.Object</li>
+<li>值类型在栈中分配内存，引用类型在堆中分配内存，引用中存放的是堆中存放的地址</li>
+<li>值类型存取快，引用类型比值类型存取慢</li>
+<li>值类型表示实际数据，引用类型表示指向存储在对内存中的数据的指针</li>
+<li>栈内存是自动释放的，堆内存是由.Net中的GC来自动释放的</li>
+<li>值类型不能为null，必须有一个确定的值，引用类型在被赋值前都为null</li>
+<li>赋值值类型变量是赋值变量的值，引用类型相当于是赋值变量的地址</li>
+</ul>
+<h3 id="ref参数和out参数的作用是什么以及有什么区别"><a href="#ref参数和out参数的作用是什么以及有什么区别" class="headerlink" title="ref参数和out参数的作用是什么以及有什么区别"></a>ref参数和out参数的作用是什么以及有什么区别</h3><ul>
+<li>ref    必须先赋值    out    不需要</li>
+</ul>
+<h3 id="ArrayList和List的主要区别"><a href="#ArrayList和List的主要区别" class="headerlink" title="ArrayList和List的主要区别"></a>ArrayList和List的主要区别</h3><ul>
+<li>ArrayList是普通类，会隐式转换成object，存在装箱拆箱的可能，存在类型不安全。</li>
+<li>List是泛型类，在使用时必须填装入类型，编译器对于泛型会预编译额外代码避免拆装箱，处理效率高于ArrayList</li>
+</ul>
+<h3 id="请简述关键字sealed的作用"><a href="#请简述关键字sealed的作用" class="headerlink" title="请简述关键字sealed的作用"></a>请简述关键字sealed的作用</h3><ul>
+<li>类声明时使用sealed可以防止其它类继承此类</li>
+<li>方法声明时使用，可以防止子类重写此方法，且必须要与override一起使用</li>
+</ul>
+<h3 id="Heap和Stack有何区别"><a href="#Heap和Stack有何区别" class="headerlink" title="Heap和Stack有何区别"></a>Heap和Stack有何区别</h3><ul>
+<li>Heap是堆，Stack是栈</li>
+<li>Heap的空间是手动申请和释放，用关键字new来分配，Stack的空间由操作系统自动分配和释放</li>
+<li>Heap空间大，相对自由，Stack的空间有限</li>
+</ul>
+<h3 id="GC产生的原因以及如何避免"><a href="#GC产生的原因以及如何避免" class="headerlink" title="GC产生的原因以及如何避免"></a>GC产生的原因以及如何避免</h3><ul>
+<li>如果有堆内存被系统判定为不再使用，那么由垃圾回收器GC进行回收</li>
+<li>避免产生堆内存对象，减少new产生对象的次数</li>
+<li>string可改为StringBuilder</li>
+</ul>
+<h3 id="什么是委托，有什么作用"><a href="#什么是委托，有什么作用" class="headerlink" title="什么是委托，有什么作用"></a>什么是委托，有什么作用</h3><ul>
+<li><p>委托也是一种数据类型，是存的方法的引用</p>
+</li>
+<li><p>委托变量可以承载一个或多个方法</p>
+</li>
+<li><p>委托( Delegate )是存有对某个方法或多个方法引用的一种引用类型</p>
+</li>
+<li><p>所有的委托( Delegate )都派生自System.Delegate类</p>
+</li>
+<li><p>委托本质上就是方法的列表（有顺序）</p>
+</li>
+<li><p>事件中心，观察者模式</p>
+</li>
+<li><p>委托类型可以作为 一个参数传给一个方法</p>
+</li>
+<li><p>委托可以将方法当做一个变量去使用</p>
+</li>
+<li><p>一个委托变量，在另一个方法中去调用叫做回调</p>
+</li>
+</ul>
+<h3 id="委托与事件的区别是什么"><a href="#委托与事件的区别是什么" class="headerlink" title="委托与事件的区别是什么"></a>委托与事件的区别是什么</h3><ul>
+<li>事件相当于一个封装好的委托，使用更安全</li>
+</ul>
+<h3 id="什么是协同程序？有何用处？有何缺点"><a href="#什么是协同程序？有何用处？有何缺点" class="headerlink" title="什么是协同程序？有何用处？有何缺点"></a>什么是协同程序？有何用处？有何缺点</h3><p><a href="https://wuzhiwei.net/unity_coroutines/" target="_blank" rel="noopener">https://wuzhiwei.net/unity_coroutines/</a></p>
+<ul>
+<li><p>协程不是多线程，是在线程中执行的一段代码，它并不能做到真正异步。</p>
+</li>
+<li><p>协程的代码可以只执行其中一部分，然后<strong>挂起</strong>，等到未来一个恰当时机再从原来挂起的地方<strong>继续向下执行</strong>。</p>
+<p>*yieldreturn是在Update之后执行</p>
+</li>
+<li><p>用处：异步加载</p>
+</li>
+<li><p>缺点：无法利用CPU的多核心</p>
+</li>
+</ul>
+<h3 id="什么是反射，反射的实现原理是什么"><a href="#什么是反射，反射的实现原理是什么" class="headerlink" title="什么是反射，反射的实现原理是什么*"></a>什么是反射，反射的实现原理是什么*</h3><ul>
+<li>可以在运行的时候得到类内的函数和属性</li>
+</ul>
+<h3 id="请简述private，public，protected，internal的区别"><a href="#请简述private，public，protected，internal的区别" class="headerlink" title="请简述private，public，protected，internal的区别"></a>请简述private，public，protected，internal的区别</h3><ul>
+<li>private：私有    成员只对其所在类公开</li>
+<li>protected：保护    成员只对其所在类以及子类公开</li>
+<li>public：公共    对任何类和成员都公开，没有访问限制</li>
+<li>internal：内部    只能在包含该类的程序集中访问</li>
+</ul>
+<h3 id="请描述Interface与abstarct类之间的不同"><a href="#请描述Interface与abstarct类之间的不同" class="headerlink" title="请描述Interface与abstarct类之间的不同"></a>请描述Interface与abstarct类之间的不同</h3><ul>
+<li>接口不能有构造函数，抽象类可以有构造函数，提供给子类使用</li>
+<li>接口可以实现多继承，抽象类只可单继承</li>
+<li>接口只能有静态的不能被修改的数据成员，一般不定义数据成员，抽象类可以有自己的数据成员</li>
+<li>接口所有的成员方法都是abstract的，抽象类可以有非abstarct的成员方法</li>
+<li>继承接口的类必须实现接口的所有方法，继承抽象类的类必须实现所有的abstract方法</li>
+</ul>
+<h3 id="简述StringBuilder和String的区别？"><a href="#简述StringBuilder和String的区别？" class="headerlink" title="简述StringBuilder和String的区别？"></a>简述StringBuilder和String的区别？</h3><ul>
+<li>String中的方法每次都需要穿件一个新的字符串对象，并且分配新的内存地址，StringBuilder是在原来的内存里对字符串进行修改</li>
+<li>String主要用于公共API，通用性好、用途广泛、读取性能高、占用内存小，StringBuilder主要用于字符串拼接，修改性能好</li>
+<li>String是不变的，线程同步，StringBuilder可变，非线程同步</li>
+</ul>
+<h3 id="什么是Lambda-表达式？"><a href="#什么是Lambda-表达式？" class="headerlink" title="什么是Lambda 表达式？"></a>什么是Lambda 表达式？</h3><ul>
+<li>Lambda是一种匿名函数</li>
+<li>优点：可以使代码更简洁</li>
+<li>缺点：容易产生闭包</li>
+</ul>
+<h3 id="简述-Net与Mono的关系"><a href="#简述-Net与Mono的关系" class="headerlink" title="简述.Net与Mono的关系"></a>简述.Net与Mono的关系</h3><ul>
+<li>Mono是.Net的一个开源跨平台工具，.Net只能在Windows下运行，而Mono可以实现跨平台运行</li>
+</ul>
+<h3 id="什么是装箱拆箱，如何优化他们的效率"><a href="#什么是装箱拆箱，如何优化他们的效率" class="headerlink" title="什么是装箱拆箱，如何优化他们的效率"></a>什么是装箱拆箱，如何优化他们的效率</h3><ul>
+<li><p>装箱：值类型转为引用类型的过程叫装箱</p>
+<p>装箱流程*</p>
+<ol>
+<li>在堆内存中分配值类型各字段加类型对象指针，同步块索引所需的内存空间</li>
+<li>值类型的所有字段复制到新分配堆内存中</li>
+<li>返回该对象的地址，也就是说该对象的引用</li>
+</ol>
+</li>
+<li><p>拆箱：引用类型转为值类型的过程叫拆箱，但如果变量为null或引用类型指向的不是期待值类型的已装箱实例，会抛出异常</p>
+</li>
+<li><p>尽可能减少值类型与引用类型之间的转换与隐转</p>
+</li>
+</ul>
+<h3 id="什么是泛型，泛型的约束有什么用？"><a href="#什么是泛型，泛型的约束有什么用？" class="headerlink" title="什么是泛型，泛型的约束有什么用？"></a>什么是泛型，泛型的约束有什么用？</h3><ul>
+<li>泛型允许我们延迟编写类或方法中的编程元素的数据类型的规范，直到实际在程序中使用它的时候。也就是说，泛型是可以与任何数据类型一起工作的类或方法。</li>
+<li>约束告知编译器类型参数必须具备的功能</li>
+</ul>
+<h3 id="什么是协变逆变？"><a href="#什么是协变逆变？" class="headerlink" title="什么是协变逆变？"></a>什么是协变逆变？</h3><ul>
+<li>要把泛型类型参数定义为协变，可以在类型定义中使用<code>out</code>关键字，协变类型参数只能用作方法的返回值或属性get访问器</li>
+<li>要把泛型类型参数定义为逆变，可在类型定义中使用in关键字，对于接口定义，抗变类型参数只能用作方法参数，不能用作返回类型</li>
+</ul>
+<h3 id="同步与异步的区别是什么？"><a href="#同步与异步的区别是什么？" class="headerlink" title="同步与异步的区别是什么？"></a>同步与异步的区别是什么？</h3><ul>
+<li>同步：程序运行的时候，在调用其他方法的时候，会等待被调用的方法按顺序执行完，才会继续执行。</li>
+<li>异步：在程序调用异步方法的时候，主程序不会等待方法执行完，而是主程序调用异步方法后直接继续运行，而异步方法会启动一个新线程来完成方法的计算。</li>
+</ul>
+<h3 id="什么是线程？什么进程？"><a href="#什么是线程？什么进程？" class="headerlink" title="什么是线程？什么进程？"></a>什么是线程？什么进程？</h3><ul>
+<li>一个进程会包含多个线程：线程是隶属于某个进程，进程销毁，线程则消失</li>
+</ul>
+<h3 id="多线程的优缺点是什么？"><a href="#多线程的优缺点是什么？" class="headerlink" title="多线程的优缺点是什么？"></a>多线程的优缺点是什么？</h3><ul>
+<li><p>优点：</p>
+<p>可以提高CPU的利用率。在多线程程序中，一个线程必须等待的时候，CPU可以运行其它的线程而不是等待，这样就大大提高了程序的效率。</p>
+</li>
+<li><p>缺点</p>
+<ol>
+<li>线程也是程序，所以线程需要占用内存，线程越多占用内存也越多； </li>
+<li>多线程需要协调和管理，所以需要CPU时间跟踪线程； </li>
+<li>线程之间对共享资源的访问会相互影响，必须解决竞用共享资源的问题；</li>
+<li>线程太多会导致控制太复杂，最终可能造成很多Bug；</li>
+</ol>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/1408386810.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://link.hhtjim.com/163/1408386810.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
